@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    // File structure
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment & Compatibility
+    "module": "commonjs",
+    "target": "ES6",
+    "types": ["node", "express"],
+
+    // Optional: or let TS auto-detect types (remove line above)
+
+    // Output control
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Type safety
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Modules
+    "esModuleInterop": true, // Important for `import express from "express"`
+    "skipLibCheck": true,
+    "isolatedModules": true,
+
+    // Only needed if using React (you can remove this)
+    // "jsx": "react-jsx",
+
+    // Node package detection (optional)
+    "moduleDetection": "force"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
