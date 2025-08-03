@@ -16,7 +16,9 @@ const Home = () => {
       setError(null);
 
       try {
-        const res = await fetch("http://localhost:5000/doctors");
+        const res = await fetch(
+          "https://niroggyan-assessment.onrender.com/doctors"
+        );
         if (!res.ok) {
           throw new Error(`Error ${res.status}: ${res.statusText}`);
         }

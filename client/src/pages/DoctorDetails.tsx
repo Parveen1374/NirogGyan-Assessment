@@ -19,7 +19,9 @@ const DoctorDetails = () => {
   useEffect(() => {
     const fetchDoctor = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/doctors/${id}`);
+        const res = await fetch(
+          `https://niroggyan-assessment.onrender.com/doctors/${id}`
+        );
         if (!res.ok) throw new Error("Doctor not found");
         const data = await res.json();
         setDoctor(data);
@@ -56,16 +58,19 @@ const DoctorDetails = () => {
     }),
     onSubmit: async (values, { setSubmitting }) => {
       try {
-        const res = await fetch("http://localhost:5000/appointments", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            doctorId: doctor?.id,
-            patientName: values.patientName,
-            email: values.email,
-            time: selectedTime,
-          }),
-        });
+        const res = await fetch(
+          "https://niroggyan-assessment.onrender.com/appointments",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              doctorId: doctor?.id,
+              patientName: values.patientName,
+              email: values.email,
+              time: selectedTime,
+            }),
+          }
+        );
 
         const data = await res.json();
 

@@ -11,7 +11,9 @@ const Appointments = () => {
       setLoading(true);
       setError(null);
       try {
-        const res = await fetch("http://localhost:5000/appointments");
+        const res = await fetch(
+          "https://niroggyan-assessment.onrender.com/appointments"
+        );
         if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`);
         const data = await res.json();
         setAppointments(data);
