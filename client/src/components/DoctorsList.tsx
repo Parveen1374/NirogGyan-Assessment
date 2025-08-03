@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Doctor } from "../types/doctor";
-
+import tick from "../assets/tick.png"; // adjust path as needed
 interface DoctorsListProps {
   doctors: Doctor[];
 }
@@ -23,7 +23,7 @@ const DoctorsList = ({ doctors }: DoctorsListProps) => {
           <div className="p-4 flex flex-col justify-between w-full">
             <div className="flex items-center gap-2">
               <h3 className="text-xl font-semibold">{doctor.name}</h3>
-              <img src="/public/tick.png" alt="tick" className="h-5 w-5 mt-1" />
+              <img src={tick} alt="tick" className="h-5 w-5 mt-1" />
             </div>
 
             <p className="text-gray-600">{doctor.specialization}</p>
