@@ -8,7 +8,7 @@ const PORT = 5000;
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://doctor-appointment-dhv5.onrender.com/", // Replace with your frontend URL
+    origin: "https://doctor-appointment-dhv5.onrender.com", // Replace with your frontend URL
     credentials: true,
   })
 );
